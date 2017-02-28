@@ -1,0 +1,13 @@
+h1 {
+  &.highlighted-primary {
+    &:after {
+      margin-top: .25em;
+      content: "";
+      display: block;
+      width: 60%;
+      border: $accent-color;
+      border-width: 0 0 3px 0;
+      border-style: solid;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+section {
+  padding: $section-padding 0;
+  min-height: 60vh;
+  &.hero-primary {
+    background-color: $accent-color;
+  }
+  &.primary {
+    background-color: $primary-background;
+  }
+  &.secondary {
+    background-color: $secondary-background;
+  }
+  @include box-shadow (0, -5px, 10px, rgba(0,0,0,.2), true)
+}

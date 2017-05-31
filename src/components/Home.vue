@@ -1,8 +1,8 @@
 <template>
   <div>
-    <section class="hero-primary">
+    <section class="hero-primary" v-bind:style="{ backgroundColor: playerColor }">
       <div class="container">
-        <h1 class="center">{{ msg }}</h1>
+        <music-player></music-player>
       </div>
     </section>
     <section class="primary">
@@ -19,12 +19,23 @@
 </template>
 
 <script>
+import MusicPlayer from './MusicPlayer';
+
 export default {
   name: 'hello',
+  components: {
+    'music-player': MusicPlayer,
+  },
   data() {
     return {
       msg: 'Welcome to Your Vue.js App',
     };
+  },
+  computed: {
+    playerColor() {
+      const trackIndex = this.$store.state.currentTrackIndex;
+      return this.$store.state.playlist[trackIndex].backgroundColor;
+    },
   },
 };
 </script>
@@ -33,5 +44,6 @@ export default {
 <style lang="scss" scoped>
 @import "../scss/mixins.scss";
 .hero-primary {
+  background-image: url("https://www.transparenttextures.com/patterns/arabesque.png");
 }
 </style>

@@ -1,5 +1,6 @@
 <template>
   <nav>
+    <div class="menu-indicator"></div>
     <div class="row">
       <div class="gr-4"></div>
       <div class="gr-4"><h1>Zack Low</h1></div>
@@ -13,13 +14,12 @@ export default {
   name: 'fixed-nav',
   data() {
     return {
-      msg: 'Welcome to Your Vue.js App',
     };
   },
 };
 </script>
 
-<style lang='scss'>
+<style lang='scss' scoped>
 @import "../scss/index.scss";
 nav {
   text-align: center;
